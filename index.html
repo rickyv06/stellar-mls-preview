@@ -9,27 +9,45 @@
 body{background:#111;color:#eee;font-family:Lato,system-ui,sans-serif;padding:48px 24px;text-align:center}
 h2{margin:0 0 8px;font-weight:600}
 .note{color:#8b8d92;font-size:14px;margin:0 0 28px}
-.row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:0 auto;max-width:760px}
-.col{flex:1;min-width:240px}
+.row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:0 auto 36px;max-width:960px}
+.col{flex:1;min-width:220px}
 .col p{color:#9a9ca2;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px}
 a{display:block;margin:10px auto;max-width:320px;padding:16px;border-radius:12px;background:#eee;color:#111;text-decoration:none;font-weight:600}
-a.light{background:#F7F4EF;border:1px solid #d8d2c8}
+a.light{background:#FAFAF8;border:1px solid #d8d2c8}
+a.toggle{background:#c9ccd2}
+a.muted{background:transparent;color:#9a9ca2;border:1px solid #333;font-weight:500}
 </style>
 </head>
 <body>
-<h2>Stellar sample MLS preview</h2>
-<p class="note">Example data only, not live</p>
+<h2>Stellar previews</h2>
+<p class="note">Mockups only, not live. All pages are noindex.</p>
 <div class="row">
   <div class="col">
-    <p>Dark</p>
+    <p>Current site · Homepage</p>
+    <a href="site-light/home-dark.html">Dark</a>
+    <a class="light" href="site-light/home-light.html">Light</a>
+    <a class="toggle" href="site-light/home-toggle.html">Toggle (remembers choice)</a>
+  </div>
+  <div class="col">
+    <p>Current site · Buy</p>
+    <a href="site-light/buy-dark.html">Dark</a>
+    <a class="light" href="site-light/buy-light.html">Light</a>
+    <a class="toggle" href="site-light/buy-toggle.html">Toggle (remembers choice)</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Sample MLS · Dark</p>
     <a href="search.html">Search results</a>
     <a href="listing.html">Listing page</a>
   </div>
   <div class="col">
-    <p>Light</p>
+    <p>Sample MLS · Light</p>
     <a class="light" href="search-light.html">Search results, light</a>
     <a class="light" href="listing-light.html">Listing page, light</a>
   </div>
 </div>
+<a class="muted" href="redesign/">Fresh redesign directions</a>
+<a class="muted" href="site-light/">Current design, dark vs light menu</a>
 </body>
 </html>
