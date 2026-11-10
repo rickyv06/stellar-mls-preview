@@ -1,0 +1,1 @@
+Playfair Display and Lato (active), plus Fraunces, Manrope and DM Sans (kept for revert): SIL Open Font License 1.1, via Google Fonts. Latin subset, self hosted. Full license texts: OFL-PlayfairDisplay.txt, OFL-Lato.txt.
