@@ -1,0 +1,235 @@
+/* Light-body variant for the sample MLS mockups.
+   Keeps the dark header, top band, and footer from the v3.10.0 theme.
+   Only the results and listing body shift to a warm off-white editorial field.
+   Not for production upload. */
+
+body.lpage-light{
+  background:#F7F4EF!important;
+  color:#1C1B19;
+}
+body.lpage-light .stars{display:none}
+body.lpage-light p{color:#2C2B28}
+
+/* ---- Dark chrome stays dark ---- */
+body.lpage-light .nav,
+body.lpage-light .lband,
+body.lpage-light footer.sfb,
+body.lpage-light .mbar{
+  color:#F7F7F8;
+}
+/* Always solid dark header. Theme JS removes .solid at scrollY=0,
+   which is fine on a dark body but washes the logo out over cream.
+   Lock the 10px vertical padding so height stays 98px and the notice
+   is not clipped under the bar. */
+body.lpage-light #nav,
+body.lpage-light .nav,
+body.lpage-light .nav.solid{
+  background:#121315!important;
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  border-bottom:1px solid rgba(230,230,235,.10);
+  padding:10px 0!important;
+}
+body.lpage-light .lpage{padding-top:98px}
+@media(max-width:800px){
+  body.lpage-light .lpage{padding-top:98px}
+}
+body.lpage-light .lband p,
+body.lpage-light footer.sfb p{color:inherit}
+
+/* Dark hero / top band under the fixed nav */
+body.lpage-light .lband{
+  background:
+    radial-gradient(ellipse 70% 80% at 82% -30%,rgba(230,230,235,.09),transparent 62%),
+    #121315;
+  color:#F7F7F8;
+  border-bottom:1px solid rgba(230,230,235,.12);
+}
+body.lpage-light .lband .lnotice{
+  background:transparent;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  color:#c9ccd2;
+}
+body.lpage-light .lband .lnotice b{color:#fff}
+body.lpage-light .lband .lsub{color:#A6A8AD}
+body.lpage-light .lband .eyebrow{color:#D9DBE0}
+body.lpage-light .lband h1{color:#F7F7F8}
+body.lpage-light .lband-slim .lnotice{border-bottom:0}
+
+/* ---- Light body field ---- */
+body.lpage-light .lbody{
+  background:#F7F4EF;
+  color:#1C1B19;
+  padding:28px 0 8px;
+}
+body.lpage-light .lbody p{color:#2C2B28}
+
+/* Search filters: white editorial card, not dark glass */
+body.lpage-light .lfilters.searchmock,
+body.lpage-light .glass.lfilters{
+  background:#fff!important;
+  background-image:none!important;
+  background-color:#fff!important;
+  border:1px solid rgba(26,27,30,.08)!important;
+  box-shadow:0 1px 2px rgba(28,27,25,.04),0 14px 40px rgba(28,27,25,.07)!important;
+}
+body.lpage-light .lfilters .tag{color:#3A4250!important}
+body.lpage-light .lfilters .hs-note{color:#5C5852;font-size:15px}
+body.lpage-light .lfilters input,
+body.lpage-light .lfilters select{
+  background:#F7F4EF!important;
+  color:#1A1B1E!important;
+  border-color:rgba(26,27,30,.14)!important;
+}
+body.lpage-light .lfilters input::placeholder{color:#7A756C}
+body.lpage-light .lfilters select option{background:#fff;color:#1A1B1E}
+body.lpage-light .lfilters input:focus,
+body.lpage-light .lfilters select:focus{
+  border-color:#3A4250!important;
+  box-shadow:0 0 0 4px rgba(58,66,80,.12)!important;
+}
+body.lpage-light .lfilters select{
+  background-color:#F7F4EF!important;
+  background-image:linear-gradient(45deg,transparent 50%,#1A1B1E 50%),linear-gradient(135deg,#1A1B1E 50%,transparent 50%)!important;
+  background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%!important;
+  background-size:6px 6px,6px 6px!important;
+  background-repeat:no-repeat!important;
+}
+
+/* Result cards */
+body.lpage-light .lcard{
+  background-color:#fff;
+  background-image:none;
+  border:1px solid rgba(26,27,30,.07);
+  box-shadow:0 1px 2px rgba(28,27,25,.04),0 16px 44px rgba(28,27,25,.08);
+  transition:transform .45s var(--ease),box-shadow .45s;
+}
+body.lpage-light .lcard:hover{
+  transform:translateY(-8px);
+  box-shadow:0 2px 6px rgba(28,27,25,.05),0 28px 64px rgba(28,27,25,.12);
+}
+body.lpage-light .lcard-media{background:#E8E4DC}
+body.lpage-light .lprice{color:#1A1B1E}
+body.lpage-light .laddr{color:#1C1B19}
+body.lpage-light .lcity{color:#5C5852}
+body.lpage-light .lmeta{
+  border-top-color:rgba(26,27,30,.10);
+  color:#2C2B28;
+}
+body.lpage-light .lmeta i{color:#6B675F}
+body.lpage-light .lmls{color:#6B675F}
+
+/* Disclaimer + muted broker line */
+body.lpage-light .lidx{color:#6B675F}
+body.lpage-light .lidx strong{color:#3A4250;font-weight:700}
+body.lpage-light .lroa{
+  margin:8px 0 0;
+  color:#8A8680;
+  font-size:11px;
+  font-weight:400;
+  letter-spacing:.04em;
+}
+
+/* Listing crumbs, type, stats */
+body.lpage-light .lcrumb{color:#6B675F}
+body.lpage-light .lcrumb a{color:#1A1B1E}
+body.lpage-light .lcrumb a:hover{color:#3A4250}
+body.lpage-light .lgallery-main,
+body.lpage-light .lgallery-side button{
+  background:#E8E4DC;
+  box-shadow:0 1px 2px rgba(28,27,25,.05),0 18px 48px rgba(28,27,25,.10);
+}
+body.lpage-light .lprice-lg,
+body.lpage-light .laddr-lg{color:#1A1B1E}
+body.lpage-light .lcity-lg{color:#5C5852}
+body.lpage-light .lmlsl{color:#6B675F}
+body.lpage-light .lpill{
+  border-color:rgba(26,27,30,.16);
+  background:#fff;
+  color:#1A1B1E;
+}
+body.lpage-light .lpill.sample{
+  color:#5C5852;
+  border-color:rgba(26,27,30,.12);
+  background:transparent;
+}
+body.lpage-light .lstat{
+  background:#fff;
+  border:1px solid rgba(26,27,30,.08);
+  box-shadow:0 1px 2px rgba(28,27,25,.04);
+}
+body.lpage-light .lstat b{color:#1A1B1E}
+body.lpage-light .lstat span{color:#6B675F}
+body.lpage-light .lblock h2{color:#1A1B1E}
+body.lpage-light .lblock h2 em{
+  background:linear-gradient(100deg,#1A1B1E 0%,#2C3340 55%,#4A5060 100%)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent;
+  filter:none;
+}
+body.lpage-light .lblock p{color:#3A3834;font-size:17px}
+body.lpage-light .lfeats li{
+  border-bottom-color:rgba(26,27,30,.10);
+  color:#2C2B28;
+}
+body.lpage-light .lfeats li:before{color:#5C6270}
+
+/* Ask card */
+body.lpage-light .lask{
+  background:#fff;
+  border:1px solid rgba(26,27,30,.08);
+  box-shadow:0 1px 2px rgba(28,27,25,.04),0 20px 56px rgba(28,27,25,.10);
+}
+body.lpage-light .lask-agent h3{color:#1A1B1E}
+body.lpage-light .lask-agent p{color:#5C5852}
+body.lpage-light .lask-agent img{
+  box-shadow:0 0 0 3px #fff,0 0 0 4px #1A1B1E;
+}
+body.lpage-light .lask-lead{color:#3A3834!important;font-size:15px;margin:0 0 16px}
+body.lpage-light .lask .btn.ghost{
+  border-color:rgba(26,27,30,.28)!important;
+  color:#1A1B1E!important;
+  box-shadow:none;
+  background:transparent;
+}
+body.lpage-light .lask .btn.ghost:hover{
+  background:#1A1B1E;
+  color:#F7F4EF!important;
+}
+body.lpage-light .lask-note{color:#6B675F}
+
+/* Thumbs + swipe leftovers */
+body.lpage-light .lthumbs button{
+  background:#E8E4DC;
+  border:1px solid rgba(26,27,30,.08);
+}
+body.lpage-light .lthumbs button.on{
+  box-shadow:0 0 0 1px #1A1B1E,0 0 20px rgba(26,27,30,.12);
+}
+body.lpage-light .lswipe-track img{background:#E8E4DC}
+body.lpage-light .lswipe-nav button{
+  background:#141517cc;
+  border:1px solid #ffffff33;
+  color:#fff;
+}
+
+/* Footer broker line stays tiny and muted on this variant */
+body.lpage-light footer.sfb .sfb-brk{
+  font:400 11px/1.5 var(--sans),system-ui,sans-serif;
+  font-style:normal;
+  letter-spacing:.04em;
+  color:#8A8680;
+}
+
+@media(max-width:800px){
+  body.lpage-light .lbody{padding-top:18px}
+  body.lpage-light .lblock p{color:#2C2B28}
+  body.lpage-light .lcity,
+  body.lpage-light .lcity-lg,
+  body.lpage-light .lmls,
+  body.lpage-light .lmlsl,
+  body.lpage-light .lask-note,
+  body.lpage-light .lidx{color:#4A4742}
+}
